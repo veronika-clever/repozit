@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+*{
+    margin:0;
+}        
+header{
+    display: flex;
+    justify-content: flex-start;
+    background-color: #E0E2DB;
+    height:370px;
+  
+
+}
+header h1{
+    text-align: center;
+    margin-top: 70px; 
+    font-size: 20px;
+    color: #AEAD92;
+    font-weight: 200;
+    font-family: 'Playfair Display SC', serif;
+    margin-left: 70px;
+
+
+   
+
+}
+header span{
+    color:#D3AB9F;
+    font-family: 'Lora', serif;
+}
+
+.line{
+    position: relative;
+    top:65px;
+    left:55px;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 75px;
+    margin-left: 40px;
+   
+    
+   
+}
+.list>li{
+    padding-right:30px;
+    width:100px;
+
+    
+
+}
+.list a{
+    text-decoration: none;
+    color:#AEAD92;
+    font-size: 14px;
+    font-family: 'Playfair Display SC', serif;
+
+}
+.hamburger-menu{
+    display: flex;
+
+}
+.r-menu{
+    display: flex;
+    margin-left:300px;
+    margin-top: 70px;
+}
+.r-menu div{
+    padding-right: 20px;
+    width: 90px;
+    text-align: center;
+}
+.r-menu p{
+    color:#AEAD92;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 12px;
+    
+}      
+header h2{
+  color:#C0BCB3;
+  font-size: 18px;
+  font-family: 'Playfair Display SC', serif;
+  position: absolute;
+  top:200px;
+  left:620px;
+  font-weight: 200;
+}
+.back{
+  background-image: url("../images/back.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+
+}
+main h3{
+  font-size: 400px;
+  color:#DCD4C0;
+  font-family: 'Playfair Display SC', serif;
+  position: absolute;
+  top:110px;
+  font-weight: 400;
+  margin-left:90px ;
+  
+}
+.back p{
+  color:#BCB9B0;
+  font-family: 'Playfair Display SC', serif;
+  font-size: 20px;
+  font-weight: regular;
+  text-align: center;
+  padding-top: 220px;
+
+}
+.main-art{
+  background-color: #DCD4C0;
+  height:100px;
+
+
+}
+
+main h1{
+  font-size: 20px;
+  color: #AEAD92;
+  font-weight: 200;
+  font-family: 'Playfair Display SC', serif;
+  margin-left: 25px;
+  padding-top: 10px;
+  
+}
+main span{
+  color:#D3AB9F;
+  font-family: 'Lora', serif;
+
+}
+.collection{
+  display: flex;
+  flex-direction: row;
+  background-color: #DCD4C0;
+}
+.line1{
+  color:#AEAD92;
+  background-color: #AEAD92;
+  height:1px;
+}
+.right-part h1{
+  color:#AEAD92;
+  font-size: 70px;
+  font-family: 'Noto Serif', serif;
+  margin-top: 60px;
+  margin-left: 50px;
+
+}
+.right-part p{
+  color:#000000;
+  font-size: 20px;
+  font-family: Lora;
+  font-weight:500;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+        
+        /* скрываем чекбокс */
+        #menu__toggle {
+            opacity: 0;
+          }
+          /* стилизуем кнопку */
+          .menu__btn {
+            display: flex; /* используем flex для центрирования содержимого */
+            align-items: center;  /* центрируем содержимое кнопки */
+            position: fixed;
+            top: 70px;
+            left: 20px;
+            width: 26px;
+            height: 26px;
+            z-index: 1;
+          }
+          /* добавляем "гамбургер" */
+          .menu__btn > span,
+          .menu__btn > span::before,
+          .menu__btn > span::after {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #AEAD92;
+          }
+          .menu__btn > span::before {
+            content: '';
+            top: -8px;
+          }
+          .menu__btn > span::after {
+            content: '';
+            top: 8px;
+          }
+          /* контейнер меню */
+          .menu__box {
+            display: block;
+            position: fixed;
+            visibility:hidden;
+            top: 92px;
+            left: -100%;
+            width: 30%;
+            height: 100%;
+            margin: 0;
+            padding: 80px 50px;
+            list-style: none;
+            background-color: brown;
+          }
+          /* элементы меню */
+          .menu__item {
+            display: block;
+            padding: 10px 24px;
+            color: #C0BCB3;
+            text-decoration: none;
+            font-family: 'Playfair Display SC', serif;
+            font-size: 20px;
+
+          }
+          .new{
+            font-weight: bold;
+            color: #C0BCB3;
+            text-transform: uppercase;
+
+          }
+          .prices{
+            color:#D3AB9F;
+            text-transform: uppercase;
+
+          }
+          .menu__item:hover {
+            background-color: #CFD8DC;
+          }
+          #menu__toggle:checked ~ .menu__btn > span {
+            transform: rotate(45deg);
+          }
+          #menu__toggle:checked ~ .menu__btn > span::before {
+            top: 0;
+            transform: rotate(0);
+          }
+          #menu__toggle:checked ~ .menu__btn > span::after {
+            top: 0;
+            transform: rotate(90deg);
+          }
+          #menu__toggle:checked ~ .menu__box {
+            visibility: visible;
+            left: 0;
+          }
+
